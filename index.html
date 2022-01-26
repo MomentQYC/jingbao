@@ -18,6 +18,24 @@
 </head>
 
 <body onLoad="init()" oncontextmenu=self.event.returnValue=false>
+var m1="./bgm/1.mp3";
+var m2="./bgm/2.mp3";
+var m3="./bgm/3.mp3";
+var m4="./bgm/4.mp3";
+var m5="./bgm/5.mp3";
+var m6="./bgm/6.mp3";
+var m7="./bgm/7.mp3";
+var x=Math.round(Math.random()*6);
+console.log(x);
+if (x==0) x=m1
+else if (x==1) x=m2
+else if (x==2) x=m3
+else if (x==3) x=m4
+else if (x==4) x=m5
+else if (x==5) x=m6
+else  x=m7
+var obj = document.getElementById("music");
+obj.innerHTML='<audio src='+'"'+x+'"'+' '+'height="0"'+'autoplay="true"'+'loop="true"'+'>'+'</audio>';
     <div id="GameScoreLayer" class="BBOX SHADE bgc1" style="display:none;">
         <div style="padding:5%;margin-top: 200px;background-color: rgba(125, 181, 216, 0.3);">
             <div id="GameScoreLayer-text"></div>
